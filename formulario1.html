@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de registro a Centro de Idiomas Programa 14+</h1>
+    </header>
+
+    <main>
+
+       <form action="#">
+            <!-- validar -->
+            <div> <!-- para que sea de bloque y no inline-->
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" name="name" maxlength="20" autocomplete="off" required>
+            </div>
+            <div>   <!-- size (tamaño de box) por defecto es 20-->
+                <label for="lastname">Apellidos: </label>
+                <input type="text" id="lastname" name="lastname"  maxlength="25" autocomplete="off" required>
+            </div>
+            <div>
+                <label for="fnacimiento">Fecha de nacimiento: </label>
+                <input type="date" id="fnacimiento" name="fnacimiento" autocomplete="off">
+            </div>
+            <div>    
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" min="14" autocomplete="off" required>
+            </div>
+            <div>
+                <label for="celular">Número de celular: </label>
+                <input type="phone" id="celular" name="celular" autocomplete="off" pattern="[0
+                9]{3}-[0-9]{3}-[0-9]{3}">
+            </div>
+            <div>
+                <label for="correo">Correo electrónico: </label>
+                <input type="email" id="correo" name="correo" autocomplete="off" required>
+            </div>
+            
+            <div>
+                <!-- lista relacionada -->
+                <label for="Nivelesdeingles">Niveles de inglés: </label>
+                <input list="Nivelesdeingles">
+                <datalist id="Nivelesdeingles">
+                    <option value="BASICO"></option>
+                    <option value="INTERMEDIO"></option>
+                    <option value="AVANZADO"></option>
+                </datalist>
+            </div>
+
+            <div>
+                <br>
+                <fieldset>
+                    <legend>Motivación de estudios</legend>
+                        <!-- opciones tipo radio --> 
+                        <input type="radio" id="actividadextracurrilar" name="motivación"  value="actividadextracurrilar" >
+                        <label for="actividadextracurrilar">Actividad Extracurricular</label>
+
+                        <input type="radio" id="aficion" name="motivación" value="aficion">
+                        <label for="aficion">Afición</label>
+
+                        <input type="radio" id="estudios_superiores" name="motivación" value="estudios_superiores">
+                        <label for="estudios_superiores">Estudios superioes</label>
+                </fieldset>
+                <br>
+            </div>
+
+
+            <div>
+                <p>¿Que piensas de nuestro centro de estudios?</p>
+                <input type="checkbox" id="opcion1" name="opcion1" value="bueno">
+                <label for="opcion1">Parece bueno</label><br>
+
+                <input type="checkbox" id="opcion2" name="opcion2" value="regular">
+                <label for="opcion2">Parece regular</label><br>
+
+                <input type="checkbox" id="opcion3" name="opcion3" value="excelente">
+                <label for="opcion3">Parece excelente</label><br>
+            </div>
+
+
+            <div>
+                <br>
+                <!-- select opciones -->
+                <label for="ComoNosConociste">Como nos conociste: </label>
+                <select id="ComoNosConociste" name="ComoNosConociste" >
+                    <option value="redessociales">Redes Sociales</option>
+                    <option value="television">TV</option>
+                    <option value="radio">Radio</option>
+                </select>
+            </div>
+
+            <div>
+                <p>¿Tienes alguna consulta?</p>
+                <textarea name="consulta" id="consulta" cols="30" rows="5"></textarea>
+            </div>
+
+            <div>
+                <!-- <button type="submit">Enviar</button> -->
+                <input type="submit" value="Enviarr">
+            </div>
+       </form>
+
+    </main>
+
+    <footer>
+        <p>Centro de Idiomas 2023</p>
+    </footer>
+</body>
+</html>
